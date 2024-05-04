@@ -25,11 +25,19 @@ const botonPresionado = (boton) => {
         pantalla.innerText='';
     }else if(boton.id === 'delete'){
         pantalla.innerText = pantalla.innerText.slice(0,pantalla.innerText.length-1);
+    }else if(boton.id === 'flotante'){
+        let contenido = pantalla.innerText;
+        if(/[0-9]+|[0-9]+,[]/.test(contenido)){
+            /* 
+                ARMAR PATRON PARA LA EXPRESION REGULAR 
+            */
+        }
     }else{
         const valor = boton.innerText;
         const pantallaActual= pantalla.innerText;
         pantalla.innerText = `${pantallaActual}${valor}`;
     }
+
 
 };
 
@@ -68,4 +76,7 @@ clear.addEventListener('click', () => {
 });
 deleteButton.addEventListener('click', () =>{
     botonPresionado(deleteButton);
+});
+flotante.addEventListener('click', () =>{
+    botonPresionado(flotante);
 });
