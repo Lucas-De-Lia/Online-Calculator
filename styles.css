@@ -22,10 +22,14 @@ body{
     background-color: rgb(16, 16, 16);
 }
 #pantalla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 300px;
     height: 50px;
     background-color: rgb(241, 232, 232);
     margin-bottom: 10px;
+    overflow: hidden;
 }
 .contenedor{
     display: flex;
@@ -36,7 +40,7 @@ body{
     background-color: rgb(19, 19, 19);
 }
 #clear{
-    width: 150px;
+    width: 75px;
     height: 50px;
     background-color: rgb(189, 186, 186);
     border: 1px solid black;
@@ -45,6 +49,18 @@ body{
     background-color: rgb(220, 217, 217);
 }
 #clear:active{
+    background-color: rgb(189, 186, 186);
+}
+#delete{
+    width: 75px;
+    height: 50px;
+    background-color: rgb(189, 186, 186);
+    border: 1px solid black;
+}
+#delete:hover{
+    background-color: rgb(220, 217, 217);
+}
+#delete:active{
     background-color: rgb(189, 186, 186);
 }
 #mas-menos{
@@ -104,4 +120,3 @@ body{
 .numero:active{
     background-color: rgb(92, 90, 90);
 }
-
