@@ -76,12 +76,16 @@ botones.forEach(boton => {
             operate(operando1,operador,operando2);
             return;
         }
-        if(pantalla.innerText === '0' && botonApretado !== '.'){
+        if(pantalla.innerText === 'No se puede dividir por cero'){
+            pantalla.innerText = '0';
+            return;
+        }
+        if(pantalla.innerText === '0'&& botonApretado !== '.'){
             if(botonApretado === '+' || botonApretado === '-' || botonApretado === '*' || botonApretado === '/'){
                 pantalla.innerText += botonApretado;
                 return;
             }
-            if(pantalla.innerText === '0'|| pantalla.innerText === 'No se puede dividir por cero'){
+            if(pantalla.innerText === '0'){
                 pantalla.innerText = botonApretado;
             }else{
                 pantalla.innerText += botonApretado;
