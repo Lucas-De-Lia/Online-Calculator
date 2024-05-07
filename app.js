@@ -28,6 +28,10 @@ const operate = (operando1,operador,operando2) => {
 botones.forEach(boton => {
     boton.addEventListener('click', () => {
         let botonApretado = boton.innerText;
+        if(pantalla.innerText === 'No se puede dividir por cero'){
+            pantalla.innerText = '0';
+            return;
+        }
        
         if(boton.id === 'clear'){
             pantalla.innerText = '0';
@@ -74,10 +78,6 @@ botones.forEach(boton => {
                 }
             }
             operate(operando1,operador,operando2);
-            return;
-        }
-        if(pantalla.innerText === 'No se puede dividir por cero'){
-            pantalla.innerText = '0';
             return;
         }
         if(pantalla.innerText === '0'&& botonApretado !== '.'){
