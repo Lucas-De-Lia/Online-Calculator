@@ -77,6 +77,10 @@ botones.forEach(boton => {
             return;
         }
         if(pantalla.innerText === '0' && botonApretado !== '.'){
+            if(botonApretado === '+' || botonApretado === '-' || botonApretado === '*' || botonApretado === '/'){
+                pantalla.innerText += botonApretado;
+                return;
+            }
             if(pantalla.innerText === '0'|| pantalla.innerText === 'No se puede dividir por cero'){
                 pantalla.innerText = botonApretado;
             }else{
